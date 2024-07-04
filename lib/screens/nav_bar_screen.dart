@@ -31,12 +31,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
           });
         },
-        shape: const CircleBorder(),
+     //   shape: const CircleBorder(),
         backgroundColor: kprimaryColor,
         child: const Icon(
           Icons.home,
           color: Colors.white,
-          size: 35,
+          size: 30,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

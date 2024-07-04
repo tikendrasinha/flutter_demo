@@ -24,9 +24,9 @@ class Profile extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Container(
-                  height: size.height * 0.4,
+                  height: size.height * 0.6,
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 8, vertical: 15),
+                  const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
                   child: Column(
                     children: [
                       Padding(
@@ -104,7 +104,7 @@ class Profile extends StatelessWidget {
                             ),
                             const SizedBox(height: 10),
                             const Text(
-                              "Winnie Vasquez",
+                              "Tikendra Sinha",
                               style: TextStyle(
                                 fontWeight: FontWeight.w800,
                                 fontSize: 35,
@@ -118,7 +118,7 @@ class Profile extends StatelessWidget {
                                   color: Colors.black45),
                             ),
                             const SizedBox(
-                              height: 15,
+                              height: 5,
                             ),
                             const Text(
                               "A Flutter developer is a software engineer who has proficiency with the Flutter framework to develop mobile, web,",
@@ -157,7 +157,7 @@ class Profile extends StatelessWidget {
 
   SizedBox friendAndMore(title, number) {
     return SizedBox(
-      width: 110,
+      width: 100,
       child: Column(
         children: [
           Text(
@@ -171,7 +171,7 @@ class Profile extends StatelessWidget {
             number,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 25,
+              fontSize: 20,
               color: Colors.black,
             ),
           )

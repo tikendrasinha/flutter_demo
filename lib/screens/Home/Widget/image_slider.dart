@@ -14,7 +14,7 @@ class ImageSlider extends StatelessWidget {
     return Stack(
       children: [
         SizedBox(
-          height: 220,
+          height: 200,
           width: double.infinity,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(15),
@@ -35,6 +35,14 @@ class ImageSlider extends StatelessWidget {
                 Image.asset(
                   "images/slider3.png",
                   fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  "images/slider.jpg",
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  "images/image1.png",
+                  fit: BoxFit.cover,
                 )
               ],
             ),
@@ -46,8 +54,7 @@ class ImageSlider extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                5,
+              children: List.generate(5,
                     (index) => AnimatedContainer(
                   duration: const Duration(microseconds: 300),
                   width: currentSlide == index ? 15 : 8,

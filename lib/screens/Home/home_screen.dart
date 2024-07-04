@@ -19,13 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    List<List<Product>> selectcategories = [
-      all,
-      shoes,
-      beauty,
-      womenFashion,
-      jewelry,
-      menFashion
+    List<List<Product>>
+    selectcategories = [
+      all, shoes, beauty, womenFashion, jewelry, menFashion
     ];
     return Scaffold(
       backgroundColor: Colors.white,
@@ -35,10 +31,10 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 35),
+              const SizedBox(height: 5),
               // for custom appbar
-              const CustomAppBar(),
-              const SizedBox(height: 20),
+              //const CustomAppBar(),
+              const SizedBox(height: 2),
               // for search bar
               const MySearchBAR(),
               const SizedBox(height: 20),
@@ -79,16 +75,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               // for shopping items
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               GridView.builder(
                 padding: EdgeInsets.zero,
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
+
+
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    childAspectRatio: 0.75,
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 20),
+                    childAspectRatio: 0.60,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10),
                 itemCount: selectcategories[selectedIndex].length,
                 itemBuilder: (context, index) {
                   return ProductCard(
@@ -122,14 +120,14 @@ class _HomeScreenState extends State<HomeScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 color: selectedIndex == index
-                    ? Colors.blue[200]
+                    ? Colors.yellow[200]
                     : Colors.transparent,
               ),
               child: Column(
                 children: [
                   Container(
-                    height: 65,
-                    width: 65,
+                    height: 60,
+                    width: 60,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
